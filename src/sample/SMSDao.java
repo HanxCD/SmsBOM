@@ -28,4 +28,10 @@ public class SMSDao {
     public void setSendId(String sendId) {
         this.sendId = sendId;
     }
+
+    public SMSDao(String url, String inputId, String sendId) {
+        this.url = url;
+        this.inputId = inputId;
+        this.sendId = sendId;
+    }
 }
