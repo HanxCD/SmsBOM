@@ -14,8 +14,7 @@ public class URL {
 
     public void setSMSDao(){
 
-        list.add(new SMSDao("https://www.renrenche.com/?fr=1463&tg_aid=10050114",
-                "phone","verify-btn"));
+        list.add(new SMSDao("https://www.renrenche.com/?fr=1463&tg_aid=10050114","phone","verify-btn"));
 
     }
 }

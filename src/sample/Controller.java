@@ -21,7 +21,9 @@ public class Controller {
                 "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0");// 配置模拟浏览器
         Connection.Response rs = con.execute();// 获取响应
         Document d1 = Jsoup.parse(rs.body());// 转换为Dom树
-        List<Element> et = d1.select("#fm1");// 获取form表单，可以通过查看页面源码代码得知
+        List<Element> et = d1.select("phone");// 获取form表单，可以通过查看页面源码代码得知
+
+        System.out.println("DL属性值 --- 》 " + d1.toString());
         // 获取，cooking和表单属性，下面map存放post时的数据
         Map<String, String> datas = new HashMap<>();
         for (Element e : et.get(0).getAllElements()) {
